@@ -1,9 +1,9 @@
 {
-  "name": "react-component-generator-gumaan",
+  "name": "fast-react-component-maker",
   "displayName": "Fast React Component Maker",
   "description": "VS Code extension to scaffold React components",
-  "version": "0.0.2",
-  "publisher": "mohammed-extensions",
+  "version": "0.0.1",
+  "publisher": "gumaan-extensions",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -16,7 +16,7 @@
   "main": "./dist/extension.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/your-repo-name"
+    "url": "https://github.com/BenGumaan/fast-react-component-maker.git"
   },
   "contributes": {
     "commands": [
@@ -49,16 +49,6 @@
           "enum": ["none", "yesNo", "editable"],
           "default": "yesNo",
           "description": "How to confirm PascalCase name conversion: 'none' (auto-accept), 'yesNo' (prompt), or 'editable' (user can modify name)"
-        },
-        "reactComponentGenerator.generateTestFile": {
-          "type": "boolean",
-          "default": false,
-          "description": "Generate a test file for the component"
-        },
-        "reactComponentGenerator.generateStoryFile": {
-          "type": "boolean",
-          "default": false,
-          "description": "Generate a Storybook file for the component"
         }
       }
     }
