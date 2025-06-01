@@ -8,10 +8,9 @@
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Snippets",
+    "Programming Languages",
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.createReactComponent"
   ],
   "main": "./dist/extension.js",
   "repository": {
