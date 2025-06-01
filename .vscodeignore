@@ -1,0 +1,31 @@
+# Ignore dev folders
+.vscode/
+.vscode-test/
+src/
+test/
+out/
+node_modules/
+
+# Ignore config and build artifacts
+*.ts
+*.map
+tsconfig.json
+webpack.config.js
+eslint.config.mjs
+*.log
+
+# Ignore git-specific files
+.git/
+.gitignore
+
+# Optional: If using yarn
+.yarnrc
+
+# Other templates or docs not needed in package
+vsc-extension-quickstart.md
+
+# Ignore test files and build artifacts
+.vscode-test.mjs
+dist/test/
+**/*.map
+scripts/

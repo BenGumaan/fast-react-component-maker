@@ -1,0 +1,17 @@
+// This is a TypeScript configuration file for a VS Code extension project.
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "rootDir": "src",
+    // "outDir": "dist",  // optional while using webpack
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enables CJS modules to be used in ESM modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "types": ["node", "vscode", "mocha"] // Include types for Node.js, VS Code, and Mocha
+  },
+  "include": ["src", "test"], // Include source and test directories
+  "exclude": ["node_modules"] // Exclude node_modules
+}

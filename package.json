@@ -1,0 +1,86 @@
+{
+  "name": "react-component-generator-gumaan",
+  "displayName": "Fast React Component Maker",
+  "description": "VS Code extension to scaffold React components",
+  "version": "0.0.2",
+  "publisher": "mohammed-extensions",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createReactComponent"
+  ],
+  "main": "./dist/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo-name"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createReactComponent",
+        "title": "Create React Component"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "React Component Generator",
+      "properties": {
+        "reactComponentGenerator.useTypeScript": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use TypeScript (.tsx) for generated components"
+        },
+        "reactComponentGenerator.includeCssModule": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include a CSS Module file"
+        },
+        "reactComponentGenerator.createIndexFile": {
+          "type": "boolean",
+          "default": false,
+          "description": "Create an index file for the component"
+        },
+        "reactComponentGenerator.nameConfirmationMode": {
+          "type": "string",
+          "enum": ["none", "yesNo", "editable"],
+          "default": "yesNo",
+          "description": "How to confirm PascalCase name conversion: 'none' (auto-accept), 'yesNo' (prompt), or 'editable' (user can modify name)"
+        },
+        "reactComponentGenerator.generateTestFile": {
+          "type": "boolean",
+          "default": false,
+          "description": "Generate a test file for the component"
+        },
+        "reactComponentGenerator.generateStoryFile": {
+          "type": "boolean",
+          "default": false,
+          "description": "Generate a Storybook file for the component"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^18.19.103",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.4.2",
+    "mocha": "^11.5.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
