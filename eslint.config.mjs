@@ -13,19 +13,19 @@ export default [
       "@typescript-eslint": typescriptEslint,
     },
     rules: {
-      "@typescript-eslint/naming-convention": [
-        "warn",
-        {
-          selector: "import",
-          format: ["camelCase", "PascalCase"],
-        }
-      ],
       curly: "warn",
       eqeqeq: "warn",
-      "no-throw-literal": "warn",
       semi: "warn",
+      "no-throw-literal": "warn",
       "no-unused-vars": "warn",
-      "@typescript-eslint/no-unused-vars": ["warn"],
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/naming-convention": [
+          "warn",
+          {
+          selector: "import",
+          format: ["camelCase", "PascalCase"],
+          }
+      ]
     }
   }
 ];

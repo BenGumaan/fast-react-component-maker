@@ -1,4 +1,4 @@
-# React Component Generator
+# Fast React Component Maker
 
 A VS Code extension to quickly scaffold React functional components with optional CSS modules and index files.
 

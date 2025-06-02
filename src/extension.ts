@@ -93,8 +93,8 @@ async function createComponentFiles(
   }
 
   await checkAndWrite(`${base}.${ext}`, component);
-  if (withStyle && style) await checkAndWrite(`${base}.module.css`, style);
-  if (withIndex && index) await checkAndWrite(path.join(folderPath, `index.${useTS ? 'ts' : 'js'}`), index);
+  if (withStyle && style) {await checkAndWrite(`${base}.module.css`, style);}
+  if (withIndex && index) {await checkAndWrite(path.join(folderPath, `index.${useTS ? 'ts' : 'js'}`), index);}
 }
 
 export function activate(context: vscode.ExtensionContext) {
@@ -139,7 +139,7 @@ export function activate(context: vscode.ExtensionContext) {
           prompt: 'Edit component name',
           value: componentName,
         });
-        if (!edited) return;
+        if (!edited) {return;}
         componentName = toPascalCase(edited.trim());
       } else {
         break;

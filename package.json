@@ -46,7 +46,11 @@
         },
         "reactComponentGenerator.nameConfirmationMode": {
           "type": "string",
-          "enum": ["none", "yesNo", "editable"],
+          "enum": [
+            "none",
+            "yesNo",
+            "editable"
+          ],
           "default": "yesNo",
           "description": "How to confirm PascalCase name conversion: 'none' (auto-accept), 'yesNo' (prompt), or 'editable' (user can modify name)"
         }
@@ -56,22 +60,32 @@
   "scripts": {
     "compile": "webpack",
     "watch": "webpack --watch",
+    "test": "mocha --require ts-node/register --file test/setup.ts test/unit/**/*.test.ts",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint-fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "package": "vsce package",
-    "publish": "vsce publish",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "^18.19.103",
     "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "@vscode/test-electron": "^2.5.2",
     "@vscode/vsce": "^3.4.2",
+    "eslint": "^9.28.0",
     "mocha": "^11.5.0",
+    "mock-require": "^3.0.3",
     "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "glob": "^11.0.2",
     "minimist": "^1.2.8"
   }
 }

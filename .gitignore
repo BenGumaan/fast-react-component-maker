@@ -39,3 +39,6 @@ webpack.config.js
 *.vsix
 # Environment variables
 .env
+
+scripts/
+.github/workflows/
