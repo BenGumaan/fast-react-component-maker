@@ -41,4 +41,3 @@ webpack.config.js
 .env
 
 scripts/
-.github/workflows/
