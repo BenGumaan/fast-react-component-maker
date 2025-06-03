@@ -12,6 +12,9 @@ export default [
     plugins: {
       "@typescript-eslint": typescriptEslint,
     },
+    env: {
+      node: true,  // Tells ESLint to use Node.js environment
+    },
     rules: {
       curly: "warn",
       eqeqeq: "warn",
