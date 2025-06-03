@@ -2,7 +2,7 @@
   "name": "fast-react-component-maker",
   "displayName": "Fast React Component Maker",
   "description": "VS Code extension to scaffold React components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "gumaan-extensions",
   "license": "MIT",
   "engines": {
