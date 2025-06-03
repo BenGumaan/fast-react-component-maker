@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Show current dir and files
-      #   run: pwd && ls -l src
+      - name: Show current dir and files
+        run: pwd && ls -l src
 
       - name: Compile extension
         run: npm run compile
