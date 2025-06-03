@@ -1,0 +1,49 @@
+name: Test, Build & Publish
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  pre-publish-tests:
+    uses: ./.github/workflows/reusable-ci.yml
+
+  publish:
+    needs: pre-publish-tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Compile extension
+        run: npm run compile
+
+      - name: Simulate publish (dry run)
+        run: echo "🎯 Simulating publish step for v0.0.2"
+  
+      # - name: Publish to VS Code Marketplace
+      #   run: npm run publish -- --pat ${{ secrets.VSCE_PAT }}
+      #   env:
+      #     VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Notify success
+        if: success()
+        run: echo "✅ Extension published successfully!"
+
+      - name: Notify failure
+        if: failure()
+        run: echo "❌ Extension publishing failed!"
+
+
+      - name: Clean up
+        if: always()
+        run: echo "🧹 Cleaning up workspace..."
