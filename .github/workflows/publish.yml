@@ -28,9 +28,9 @@ jobs:
         run: npm run compile
   
       - name: Publish to VS Code Marketplace
-        run: npm run publish -- --pat ${{ secrets.VSCE_PAT }}
+        run: npm run publish -- --pat ${{ secrets.VSCE_TOKEN }}
         env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
 
       - name: Notify success
         if: success()
