@@ -27,7 +27,6 @@ coverage/
 test-results/
 
 # Webpack artifacts
-webpack.config.js
 *.map
 
 # Misc
@@ -37,6 +36,7 @@ webpack.config.js
 
 # Package output
 *.vsix
+
 # Environment variables
 .env
 

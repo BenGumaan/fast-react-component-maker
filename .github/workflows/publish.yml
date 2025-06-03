@@ -24,19 +24,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Show current dir and files
-        run: pwd && ls -l src
-
       - name: Compile extension
         run: npm run compile
-
-      - name: Simulate publish (dry run)
-        run: echo "🎯 Simulating publish step for v0.0.2"
   
-      # - name: Publish to VS Code Marketplace
-      #   run: npm run publish -- --pat ${{ secrets.VSCE_PAT }}
-      #   env:
-      #     VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - name: Publish to VS Code Marketplace
+        run: npm run publish -- --pat ${{ secrets.VSCE_PAT }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
       - name: Notify success
         if: success()
