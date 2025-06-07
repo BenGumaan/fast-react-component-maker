@@ -13,6 +13,12 @@
     "Programming Languages",
     "Other"
   ],
+  "keywords": [
+    "react",
+    "component",
+    "generator",
+    "typescript"
+  ],
   "main": "./dist/extension.js",
   "repository": {
     "type": "git",
